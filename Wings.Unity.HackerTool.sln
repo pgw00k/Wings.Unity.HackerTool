@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Common", "..\WingsCSharp\WingsCSharp\Common\Common.shproj", "{B88B16B1-5D0D-4FBB-B37B-93A8195013C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wings.genocean.unity.common", "..\..\Unity_Main\wings.genocean.unity.common.csproj", "{BF1CE522-D964-2AC0-8FC3-8ED1E0E64D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wings.Unity.HackerTool.Test", "Wings.Unity.HackerTool.Test\Wings.Unity.HackerTool.Test.csproj", "{34084C84-935B-4594-80F9-ED04FB15D57B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ConsoleHelper", "..\WingsCSharp\WingsCSharp\ConsoleHelper\ConsoleHelper.shproj", "{CC4B427B-870B-4475-9D46-849A748A4AE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wings.Unity.HackerTool", "Wings.Unity.HackerTool\Wings.Unity.HackerTool.csproj", "{D79DA5CC-EAF1-47D7-AEA9-4308A97B4744}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\WingsCSharp\WingsCSharp\ConsoleHelper\ConsoleHelper.projitems*{34084c84-935b-4594-80f9-ed04fb15d57b}*SharedItemsImports = 4
+		..\WingsCSharp\WingsCSharp\Common\Common.projitems*{b88b16b1-5d0d-4fbb-b37b-93a8195013c4}*SharedItemsImports = 13
+		..\WingsCSharp\WingsCSharp\ConsoleHelper\ConsoleHelper.projitems*{cc4b427b-870b-4475-9d46-849a748a4ae1}*SharedItemsImports = 13
+		..\WingsCSharp\WingsCSharp\Common\Common.projitems*{d79da5cc-eaf1-47d7-aea9-4308a97b4744}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF1CE522-D964-2AC0-8FC3-8ED1E0E64D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1CE522-D964-2AC0-8FC3-8ED1E0E64D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1CE522-D964-2AC0-8FC3-8ED1E0E64D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1CE522-D964-2AC0-8FC3-8ED1E0E64D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34084C84-935B-4594-80F9-ED04FB15D57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34084C84-935B-4594-80F9-ED04FB15D57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34084C84-935B-4594-80F9-ED04FB15D57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34084C84-935B-4594-80F9-ED04FB15D57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79DA5CC-EAF1-47D7-AEA9-4308A97B4744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79DA5CC-EAF1-47D7-AEA9-4308A97B4744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79DA5CC-EAF1-47D7-AEA9-4308A97B4744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79DA5CC-EAF1-47D7-AEA9-4308A97B4744}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2BDD60C-E9BF-4E01-8DCA-CDADDF0AB142}
+	EndGlobalSection
+EndGlobal
