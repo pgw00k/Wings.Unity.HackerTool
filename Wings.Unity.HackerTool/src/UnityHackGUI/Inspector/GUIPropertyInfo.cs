@@ -9,6 +9,7 @@ namespace UnityHack
         public GUIPropertyInfo(PropertyInfo info, object target) : base(info, target)
         {
             _MemberType = (HackTypeCode)Type.GetTypeCode(_Source.PropertyType);
+            _TypeCode = System.Type.GetTypeCode(_Source.PropertyType);
         }
 
         protected override void _DrawFirstLineLabel()
@@ -25,9 +26,11 @@ namespace UnityHack
             value = RenderFunction.Invoke(value);
             info.SetValue(_Target, value, null);
 #elif NET45
+
             CommonType value = (CommonType)info.GetValue(_Target);
             value = RenderFunction.Invoke(value);
             info.SetValue(_Target, value);
+
 #endif
         }
 

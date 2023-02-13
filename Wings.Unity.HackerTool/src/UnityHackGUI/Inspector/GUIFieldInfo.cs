@@ -9,6 +9,7 @@ namespace UnityHack
         public GUIFieldInfo(FieldInfo info, object target) : base(info, target)
         {
             _MemberType = (HackTypeCode)Type.GetTypeCode(_Source.FieldType);
+            _TypeCode = System.Type.GetTypeCode(_Source.FieldType);
         }
 
         protected override void _DrawFirstLineLabel()

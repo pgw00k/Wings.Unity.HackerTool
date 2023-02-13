@@ -33,6 +33,7 @@ namespace UnityHack
         protected object _Target;
 
         protected HackTypeCode _MemberType = HackTypeCode.Object;
+        protected TypeCode _TypeCode = TypeCode.Object;
 
         public GUIMemberInfo(T info, object target)
         {
@@ -40,6 +41,7 @@ namespace UnityHack
             _Target = target;
             _ExpandName = "▼";
             _UnexpandName = "▶";
+
         }
 
         protected override void _DrawFirstLineLabel()
@@ -79,31 +81,41 @@ namespace UnityHack
         {
         }
 
+        protected virtual object GetValue()
+        {
+            return null;
+        }
+
+        protected virtual void SetValue(object vlaue)
+        {
+
+        }
+
         protected virtual void _RenderDefaultGUI()
         {
             try
             {
-                switch (_MemberType)
+                switch (_TypeCode)
                 {
-                    case HackTypeCode.Boolean:
+                    case System.TypeCode.Boolean:
                         _RenderCommonValue<bool>(_Source, b => GUILayout.Toggle(b, ""));
                         break;
-                    case HackTypeCode.String:
-                        _RenderCommonValue<string>(_Source, b => GUILayout.TextField(b, ""));
+                    case System.TypeCode.String:
+                        _RenderCommonValue<string>(_Source, b => GUILayout.TextField(b ,""));
                         break;
-                    case HackTypeCode.Int16:
+                    case System.TypeCode.Int16:
                         _RenderCommonValue<Int16>(_Source, b => Convert.ToInt16(GUILayout.TextField(b.ToString())));
                         break;
-                    case HackTypeCode.Int32:
+                    case System.TypeCode.Int32:
                         _RenderCommonValue<Int32>(_Source, b => Convert.ToInt32(GUILayout.TextField(b.ToString())));
                         break;
-                    case HackTypeCode.Int64:
+                    case System.TypeCode.Int64:
                         _RenderCommonValue<Int64>(_Source, b => Convert.ToInt64(GUILayout.TextField(b.ToString())));
                         break;
-                    case HackTypeCode.Single:
+                    case System.TypeCode.Single:
                         _RenderCommonValue<Single>(_Source, b => Convert.ToSingle(GUILayout.TextField(b.ToString())));
                         break;
-                    case HackTypeCode.Object:
+                    case System.TypeCode.Object:
                         _RenderObjectValue();
                         break;
                     default:
